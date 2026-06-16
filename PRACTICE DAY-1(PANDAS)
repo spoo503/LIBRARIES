@@ -1,0 +1,115 @@
+1.import pandas as pd
+s=pd.Seriess=[10,20,30,40]
+print(s)
+
+2.s2=[100,200,300]
+s1=['A','B','C']
+d=pd.Series(s2,index=s1)
+print(d)
+A 100
+B 200
+C 300
+
+3.s2=[90,80,95]
+s1=['Math','Sci','Eng']
+d=pd.Series(s2,index=s1,name="Bhoomi")
+print(d)
+Math 90
+Sci 80
+Eng 95
+
+4.import pandas as pd
+
+s=pd.Series([10,20,30])
+
+print(s.dtype)
+int60
+
+5.s=pd.Series(['Red','Blue','Green'])
+
+print(s.dtype)
+object
+
+6.marks=[67,89,45,32]
+sub=['Eng','Kan','Hin','Math']
+
+s=pd.Series(marks,index=sub)
+size=4
+dtype=int64
+values=4
+index=3
+
+7.s=pd.Series([10,20,30,40])
+s.size=4
+
+
+8.s=pd.Series([10,20,20,40])
+s.is_unique=True
+
+9.s=pd.Series([10,20,30],name='Student')
+0  10
+1  20
+2  30
+Student
+
+10 s.head()
+error
+11.s.tail()
+Error
+12.s.sample()
+10,30,20
+13....
+14.s=pd.Series([50,20,10,40])
+s.sort_values(ascending=True)
+
+15.s=pd.Series([50,20,10,40])
+s.sort_values(ascending=False)
+
+16.s=pd.Series(
+    [50,20,10],
+    index=['C','A','B']
+)
+s.sort_index()
+it would be 
+[50,20,10],
+    index=['A','B','C']
+
+17.s=pd.Series([10,20,30])
+1.sum=60
+2.mean=30
+3.max=30
+4.min=10
+
+
+18. diffrence is that size count all missing elements but count wont count,
+
+19.s=pd.Series([10,20,30,40,50])
+s.median()
+output=30
+
+20 describe gives allstastics at once.
+
+21.s=pd.Series([10,20,30,40])
+s[0]
+output 10
+
+22.s[-1]
+
+23. s[-2:-4]
+
+24.s['EVS']=100
+
+25.dtype gives the datatype and number of bits and type onl gives which data type it is.
+26.sort values will acess the elements in ascending order and sort index will give sorted 
+index without changing the values.
+27.Series is a column like multiple rows and one column.
+28.boject means string
+29.it is calles as data manipulation bcz we can change the data according to our convienence 
+using inplace method.
+30s=pd.Series([10,20,20,40])
+s.is_unique
+output:False
+
+
+
+  
