@@ -1,0 +1,211 @@
+pandas is a fast,easy and powerful library that is used for data transformation and data manipulation.
+
+Features :
+1.it is a open source data analysis.
+2.It is data manipulation tool
+3.built on python programming language.
+
+pandas series:
+a pandas series is like a column in a table.it is 1D array holding data of any type 
+there ane two types of series.
+we can create 1d and 2d 
+1.1d---series--->multiple rows and one column
+2.2d--dataframe--->  multiple rows and columns.
+
+importing pandas:
+we can import pandas using syntax:
+import pandas as pd
+
+series of lists basically has two types:
+1.values
+2.index 
+
+
+1.colour=['Blue','Green','Red']
+pd.Series(colour)
+output :
+0     Blue
+1    Green
+2      Red
+dtype: object  # here object refr to string data type.
+
+here 0,1,2 are the index positions .
+
+#CUSTOM INDEX.
+
+marks=[67,89,45,32]
+sub=['Eng','Kan','Hin','Math']
+pd.Series(marks,index=sub)
+output:
+Eng     67
+Kan     89
+Hin     45
+Math    32
+dtype: int64
+
+marks=[67,89,45,32]
+sub=['Eng','Kan','Hin','Math']
+pd.Series(marks,index=sub,name='srikar')
+output:
+Eng     67
+Kan     89
+Hin     45
+Math    32
+dtype: int64
+srikar
+
+ATTRIBUTES:
+1.Size:
+this counts how many varirables are present in the array.
+marks_series=pd.Series(marks,index=sub,name='srikar')
+print(marks_series)
+marks_series.size
+output:
+
+
+Eng     67
+Kan     89
+Hin     45
+Math    32
+Name: srikar, dtype: int64
+4
+
+2.name:
+it is one of the attribute to access the name .
+marks_series.name
+
+output:
+Name: srikar
+
+3.dtype:
+it indicates the data type and the number of bites.
+
+marks_series.dtype
+output
+dtype('int64')
+
+4.is_unique:
+it is used to check that any duplicates elements are present or not.
+output will be : 1.True,False
+marks_series.is_unique
+output:
+True
+
+5.values:
+it acess the values.
+mark_series.values
+ouput:
+[67,89,45,32]
+
+6.index.
+it is used to acess the index values.
+marks_series.index
+['Eng','Kan','Hin','Math']
+
+Series using read csv and tsv files.
+csv=comma sepearated values.
+tsv=tab seperated values.
+same like acessing the data using file path.
+
+import pandas  as pd
+ds=pd.read(r,"csv/read..")
+print(ds)
+output:
+it access all the values in that file.
+type(pd.read(r,"csv/readd")
+gives u as Dataframe
+ TO convert it into series use squeeze=True.
+ ds=pd.read(r,"csv/read..",squeez=True)
+ print(type(ds))
+print(ds)
+output:
+Seires
+
+
+
+SERIES METHODS:
+1.head and tail.
+head=we use head to acess the first five elements of the file.
+tail=we use head to acess the last  five elements of the file.
+
+2.sample:
+it is used to acess the random elements from the file .
+if u want to specific n type of elements use sample(n).
+
+3.value_counts:
+it is used to acess the values in desecending order.
+
+4.sort_values:
+it is used to acess the values in the sorted order(asecending order).
+it is temporary change if we want permanent change use "inplace".
+marks_series.sort_values(inplace=True)
+this make a new set of file permanently.
+
+or we can use marks_series.sort_values.head.value[0]
+same.
+
+5.sort_index:
+it is used to acess the index values in sorted manner.
+marks_series.sort_index
+
+
+SERIES MATHEMATICL METHODS:
+1.count:
+it is used to count the elements in the file.
+diffrence between size and count is that size that counts all the elements even missing(....) elements,but cout wont count the missing elements.
+
+2.sum:
+it is used to add all the elements.
+marks_series.sum
+
+3.product:
+it is used to calculate the product of elements.
+marks_series.product
+if big values it gives zero as output
+
+4.mean/median/mode/mode/std/var:
+these are the methods used to find all the values.
+
+5.describe
+it is used to describe all types of methods.
+
+SERIES INDEXING
+1.integer indexing:
+it is used to acess the the index
+sx=pd.Series[13,12,45]
+print(x[1])
+print(x[-1])
+output:
+12
+value Error -y?
+
+2.slicing :same like acessijg the elements .
+
+we can add the elements : marks_series['evs']=100
+
+SERIES WITH PYTHON FUNCTIONALITIES:
+1.len/type/dir/sort.
+2.type:
+lis(marks_series)
+
+3.membership and relational operators:
+4.looping 
+5.arithmetic.
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
