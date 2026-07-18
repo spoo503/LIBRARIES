@@ -1,4 +1,4 @@
-1.import pandas as pd
+###1.import pandas as pd
 s=pd.Seriess=[10,20,30,40]
 print(s)
 
